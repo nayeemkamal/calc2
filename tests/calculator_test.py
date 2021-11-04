@@ -22,6 +22,7 @@ def test_calculator_subtract_static(clear_history_fixture):
     my_tuple = (1.0,2.0,3.0)
     assert Calculator.subtract_numbers(my_tuple) == -6.0
 
+<<<<<<< HEAD
 def test_calculator_multiply_static(clear_history_fixture):
     """Testing the subtract method of the calc"""
     # pylint: disable=unused-argument,redefined-outer-name
@@ -29,3 +30,29 @@ def test_calculator_multiply_static(clear_history_fixture):
     my_tuple = (1.0,2.0,3.0)
     assert Calculator.multiply_numbers(my_tuple) == 6.0
 
+=======
+def test_calculator_add():
+    """Testing the Add function of the calculator"""
+    #Arrange by instantiating the calc class
+    calc = Calculator()
+    #Act by calling the method to be tested
+    calc.add_number(4)
+    #Assert that the results are correct
+    assert calc.result == 4
+
+def test_calculator_get_result():
+    """Testing the Get result method of the calculator"""
+    calc = Calculator()
+    assert calc.get_result() == 0
+
+def test_calculator_subtract():
+    """Testing the subtract method of the calculator"""
+    calc = Calculator()
+    calc.subtract_number(1)
+    assert calc.get_result() == -1
+def test_calculator_multiply():
+    """ tests multiplication of two numbers"""
+    calc = Calculator()
+    result  = calc.multiply_numbers(1,2)
+    assert result == 2
+>>>>>>> 1b87f1bcbc00fddae26185944cab9aef761bef46
