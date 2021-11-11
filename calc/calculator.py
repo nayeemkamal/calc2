@@ -7,9 +7,17 @@ class Calculator:
     #the calculator class just calls methods on History.class
     @staticmethod
     def get_last_result_value():
+        """ This is the gets the value of result of the calculation"""
+        return History.get_last_calculation().get_result()
+    @staticmethod
+    def get_last_result():
         """ This is the gets the result of the calculation"""
-        # I made this method so that I don't have more than one action per function
-        return History.get_last_calculation_result_value()
+        return History.get_last_calculation().get_result()
+    
+    @staticmethod
+    def clear_history():
+        """ This is the clears history of the calculation"""
+        return History.clear_history()
     @staticmethod
     #tuple allows me to pass in as many values as a I want
     def add_numbers(tuple_values: tuple):
@@ -25,4 +33,9 @@ class Calculator:
     def multiply_numbers(tuple_values: tuple):
         """ multiplication number from result"""
         History.add_multiplication_calculation(tuple_values)
+        return True
+    @staticmethod
+    def divide_numbers(tuple_values: tuple):
+        """ division number from result"""
+        History.add_division_calculation(tuple_values)
         return True
