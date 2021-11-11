@@ -5,6 +5,7 @@ from calc.calculations.multiplication import Multiplication
 from calc.calculations.division import Division
 
 class History:
+    
     history = []
     # pylint: disable=too-few-public-methods
     @staticmethod
